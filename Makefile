@@ -56,7 +56,7 @@ updatetest:
 	./scripts/travis/integration-test.sh
 
 bindata:
-	go get -u github.com/jteeuwen/go-bindata/... && ${GOPATH}/bin/go-bindata -pkg=assets -o=pkg/assets/bindata.go assets && gofmt -w pkg/assets/bindata.go
+	go get -u github.com/jteeuwen/go-bindata/... && go-bindata -pkg=assets -o=pkg/assets/bindata.go assets && gofmt -w pkg/assets/bindata.go
 
 
 cleanup:
